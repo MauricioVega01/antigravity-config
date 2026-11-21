@@ -1,0 +1,19 @@
+# Never commit machine-specific or sensitive files
+.env
+.env.*
+!.env.example
+**/mcp_config.json
+**/*token*
+**/*secret*
+**/credentials.json
+**/cookies.txt
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+**/*.mp3
+**/*.wav
+**/*.flac
+**/*.aiff
+**/*.m4a
+backups/
+*.log
