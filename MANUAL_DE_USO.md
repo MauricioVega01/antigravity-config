@@ -177,6 +177,13 @@ En Antigravity no necesitas activar manualmente cada skill; el modelo detecta el
 * **`pos-hardware-backend-dev`**: Comunicación serial RS232 con terminales POS Transbank (`transbank-pos-sdk`).
 * **`totem-code-review`**: Checklist específico para evitar regresiones en tótems antes de desplegar a producción.
 
+### 🎓 I. INACAP & Analista Programador (Académico, Modelamiento, Ofimática y BI)
+* **`inacap-analista-programador`**: Modelamiento y diseño de software formal. Diagramas de Casos de Uso con tablas de especificación completa (Actores, Pre/Postcondiciones, Happy Path y Excepciones), Diagramas de Clases UML, Diagramas de Secuencia y Normalización de BD (1FN, 2FN, 3FN).
+* **`academic-report-generator`**: Redacción y estructura formal de informes técnicos, tesis y presentaciones ejecutivas bajo normas institucionales INACAP y **citas APA 7ma edición**. Genera y exporta documentos Word (`.docx`) y presentaciones (`.pptx`) con scripts Python automatizados.
+* **`excel-math-data-analyst`**: Especialista en hojas de cálculo Excel (`BUSCARX`, `INDICE+COINCIDIR`, tablas dinámicas, dashboards con `openpyxl`/`pandas`) y ciencias de la computación teóricas (álgebra booleana, simplificación por Karnaugh, notación Big O y conversión de bases binario/hexadecimal/complemento a 2).
+* **`power-bi-dax-specialist`**: Inteligencia de negocios con Power BI. Modelado dimensional (Esquema Estrella Fact/Dim), fórmulas DAX avanzadas (`CALCULATE`, Time Intelligence `TOTALYTD`, `SAMEPERIODLASTYEAR`) y ETL con Power Query (M).
+* **`database-sql-inacap`**: Desarrollo y administración integral de bases de datos relacionales multi-motor para INACAP: **PostgreSQL** (`PL/pgSQL`), **Oracle Database** (`PL/SQL` con cursores y excepciones) y **SQL Server** (`T-SQL` con transacciones seguras `TRY...CATCH`).
+
 ---
 
 ## 7. Flujo de Sincronización entre Equipos (Casa ⟷ Oficina)
