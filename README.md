@@ -3,10 +3,12 @@
 Plantilla privada de configuracion global de Antigravity, versionable y utilizable en PC de casa y PC de oficina (solo cuando las politicas de la oficina lo permitan).
 
 ## Que instala
-- `global/AGENTS.md` -> `%USERPROFILE%\.gemini\AGENTS.md` (reglas globales siempre activas).
-- `global/skills/*/SKILL.md` -> `%USERPROFILE%\.gemini\config\skills\<skill>\SKILL.md` (skills globales).
+- `global/AGENTS.md` -> `%USERPROFILE%\.gemini\AGENTS.md` (reglas globales siempre activas con soporte Mermaid y prevención de regresiones).
+- `global/skills/*/SKILL.md` -> `%USERPROFILE%\.gemini\config\skills\<skill>\SKILL.md` (skills globales curadas para Git, GitHub, Jira, Monday, Python, DevOps, etc.).
 - `templates/breakingchains/` opcional: `AGENTS.md` y `.agents/skills/` en la raiz de BreakingChains.
-- No copia MCP, tokens, sesiones, settings del IDE, credenciales ni datos musicales.
+- `templates/totem-kiosk/` opcional: `AGENTS.md` y `.agents/skills/` en la raiz de proyectos Totem Pullman Costa.
+- `mcp/mcp.example.json`: Plantilla de servidores MCP (Puppeteer, Fetch, PostgreSQL).
+- No copia MCP con credenciales privadas, tokens, sesiones, settings del IDE ni datos sensibles.
 
 ## Requisitos
 Windows PowerShell 5.1 o PowerShell 7; Git opcional (necesario si quieres sincronizar con GitHub). No requiere permisos de administrador.
@@ -34,7 +36,14 @@ Si ya tienes reglas/skills, el script **omite conflictos**. Para reemplazarlos c
 .\scripts\Install-BreakingChainsTemplate.ps1 -ProjectPath 'D:\DJ RADIO IA' -WhatIf
 .\scripts\Install-BreakingChainsTemplate.ps1 -ProjectPath 'D:\DJ RADIO IA'
 ```
-Si ya existe un AGENTS.md no se sobreescribe salvo `-Force`. Las reglas de BreakingChains deben ir al repositorio de BreakingChains; las globales al de configuracion.
+Si ya existe un AGENTS.md no se sobreescribe salvo `-Force`.
+
+## Totem Pullman Costa (opcional, para backend o frontends de Totem)
+```powershell
+.\scripts\Install-TotemTemplate.ps1 -ProjectPath 'C:\Users\WIT2026\Documents\new-backen-local-costa' -WhatIf
+.\scripts\Install-TotemTemplate.ps1 -ProjectPath 'C:\Users\WIT2026\Documents\new-backen-local-costa'
+```
+Inyecta reglas de hardware (POS Transbank, impresoras ESC/POS/ZPL, teclado táctil, idle timer) y skills correspondientes en `.agents/skills`.
 
 ## GitHub — configuracion en cualquier PC
 1. Crea manualmente en GitHub un repositorio **privado** llamado `antigravity-config`.

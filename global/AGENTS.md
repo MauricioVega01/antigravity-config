@@ -9,4 +9,6 @@
 - Validate real behavior after edits; distinguish tested facts from untested assumptions. Never claim tests passed without executing them.
 - Preserve accessibility, error handling, performance, and backward compatibility.
 - Report changed files, tests run, outstanding risks, and how to roll back.
+- For non-trivial architectural flows, state machines, hardware communication (e.g. POS/Printers), or ticket workflows, provide clear Mermaid diagrams (`sequenceDiagram`, `flowchart TD`, `stateDiagram-v2`).
+- When working on frontends or UI layouts, leverage local browser/DevTools tools or browser subagents to inspect rendering and prevent visual regressions.
 - Respect workspace AGENTS.md and relevant skills; project rules add to these defaults.

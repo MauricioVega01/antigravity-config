@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ],
+      "description": "Navegador headless para pruebas visuales, inspección de UI en localhost y capturas de pantalla"
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "description": "Herramienta para consultar documentación y APIs externas sin navegador completo"
+    },
+    "postgres-local": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres:TU_PASSWORD@localhost:5432/tu_base_datos"
+      ],
+      "description": "Inspección de base de datos PostgreSQL local (ajustar credenciales solo en tu máquina local)"
+    }
+  }
+}
