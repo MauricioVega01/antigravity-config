@@ -184,6 +184,13 @@ En Antigravity no necesitas activar manualmente cada skill; el modelo detecta el
 * **`power-bi-dax-specialist`**: Inteligencia de negocios con Power BI. Modelado dimensional (Esquema Estrella Fact/Dim), fórmulas DAX avanzadas (`CALCULATE`, Time Intelligence `TOTALYTD`, `SAMEPERIODLASTYEAR`) y ETL con Power Query (M).
 * **`database-sql-inacap`**: Desarrollo y administración integral de bases de datos relacionales multi-motor para INACAP: **PostgreSQL** (`PL/pgSQL`), **Oracle Database** (`PL/SQL` con cursores y excepciones) y **SQL Server** (`T-SQL` con transacciones seguras `TRY...CATCH`).
 
+### 💼 J. Carrera Profesional, CV, Portafolios y Reclutamiento Tech
+* **`cv-resume-expert`**: Redactor y optimizador de Currículum Vitae (CV) de alto impacto. Formato **ATS-Friendly** (sin tablas rotas ni gráficos ilegibles por parsers), aplicación de la **fórmula XYZ de Google** (*"Logré X, medido por Y, implementando Z"*), adaptación quirúrgica por oferta laboral y exportación a Word/PDF.
+* **`portfolio-showcase-architect`**: Diseñador de portafolios web y perfiles de GitHub estelares (`username/username`). Convierte proyectos en casos de estudio de ingeniería con arquitectura Mermaid, stack, desafíos de concurrencia/hardware superados y métricas.
+* **`job-search-recruiter-scout`**: Scout y mentor de postulación en portales tech (LinkedIn, Get on Board, Trabajando.com, ChileTrabajos, Indeed). Análisis de encaje (Match Score 0-100%), detección de palabras clave y redacción de **Cartas de Presentación (Cover Letters)** persuasivas.
+* **`interview-prep`**: Entrenador y simulador de entrevistas técnicas y de RRHH. Práctica de preguntas conductuales con metodología **STAR**, preguntas de arquitectura/System Design en 5 pasos y asesoría en bandas y negociación salarial.
+* **`linkedin-career-optimizer`**: Optimizador de perfil de LinkedIn para captar reclutadores (SEO en Titular, sección "Acerca de" con storytelling) y redactor de publicaciones técnicas de alta visibilidad con tipografía Unicode.
+
 ---
 
 ## 7. Flujo de Sincronización entre Equipos (Casa ⟷ Oficina)
