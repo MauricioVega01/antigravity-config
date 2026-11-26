@@ -114,21 +114,68 @@ Cuando clones o crees un proyecto en ese equipo, puedes inyectarle sus directiva
 
 ---
 
-## 6. Catálogo de Agentes y Skills: ¿Cómo utilizarlos?
+## 6. Catálogo de Agentes y Skills (58 Skills Categorizadas)
 
-En Antigravity no necesitas activar manualmente cada skill; el modelo detecta el contexto de tu consulta y activa automáticamente la skill adecuada. Sin embargo, puedes guiarlo mencionando el rol:
+En Antigravity no necesitas activar manualmente cada skill; el modelo detecta el contexto de tu consulta y activa automáticamente la skill adecuada. Aquí tienes el mapa completo de capacidades:
 
-| Rol / Skill | Cómo invocarlo / Cuándo usarlo |
-| :--- | :--- |
-| **`git-github-expert`** | *"Revisa el diff, arma un commit convencional y redacta el Pull Request"* |
-| **`jira-agile-specialist`** | *"Toma este requerimiento y transfórmalo en un Epic con User Stories y criterios Gherkin Given/When/Then"* |
-| **`monday-specialist`** | *"Tengo el bug MON-452. Analiza el contexto, reproduce el error y genera el update para Monday"* |
-| **`postgresql-dba`** | *"Optimiza esta consulta con EXPLAIN ANALYZE y diseña un índice CONCURRENTLY"* |
-| **`principal-software-engineer`**| *"Revisa la arquitectura de este módulo bajo principios SOLID y minimiza la deuda técnica"* |
-| **`gem-code-simplifier`** | *"Simplifica este archivo, reduce complejidad ciclomática y elimina código muerto sin alterar funcionalidad"* |
-| **`terminal-helper`** | *"Dame el comando PowerShell para buscar procesos huérfanos o filtrar puertos en uso"* |
-| **`code-review`** | *"Haz una auditoría de seguridad y revisión de calidad a este PR antes de fusionar"* |
-| **`totem-code-review`** | *"Revisa este componente Vue bajo el checklist de pantallas táctiles de Pullman Costa"* |
+### 🧩 A. Orquestación y Planificación de Arquitectura
+* **`gem-orchestrator`**: Líder técnico orquestador. Detecta fases, descompone tareas complejas, delega en subagentes y sintetiza resultados.
+* **`gem-planner`**: Diseñador de planes de ejecución en olas (`wave plans`), descomposición de tareas con dependencias y criterios de aceptación.
+* **`project-architecture-planner`**: Planificador de arquitectura holística, evaluación de tech stacks, diagramas Mermaid interactivos y escalabilidad.
+* **`context-architect`**: Experto en mapear dependencias y efectos dominó antes de cambios multi-archivo o grandes refactorizaciones.
+
+### 🧪 B. Control de Calidad (QA), Testing y Analizadores
+* **`qa-subagent`**: Subagente meticuloso de QA para diseño de planes de pruebas, cacería de bugs y análisis de casos borde.
+* **`quality-playbook`**: Auditoría exhaustiva de calidad (fitness-to-purpose, Council of Three spec audit y parches verificados con TDD).
+* **`test-gap-audit`**: **Analizador de tests**. Audita código no probado, falsas coberturas, contratos de API sin validar y pruebas obsoletas.
+* **`playwright-tester`**: Modo de pruebas E2E automatizadas con Playwright en navegadores.
+* **`gem-browser-tester`**: Tester E2E de flujos de usuario, regresiones visuales y accesibilidad en vivo con Puppeteer.
+* **`react19-test-guardian`**: Guardián de suites de prueba. Corrige tests rotos de Jest/Vitest y no para hasta alcanzar **0 fallos**.
+* **`tdd-red` / `tdd-green` / `tdd-refactor`**: Tríada estricta de Test-Driven Development (escribir prueba que falle -> código mínimo -> refactorizar).
+
+### 🎨 C. Especialistas en Frontend
+* **`expert-react-frontend-engineer`**: React 19.2, Server Components, Server Actions, modern hooks, TypeScript y optimización de renderizado.
+* **`expert-nextjs-developer`**: Next.js 16, App Router, Cache Components, Turbopack y SSR de alto rendimiento.
+* **`vuejs-expert`**: Vue 2.7 y Vue 3 con Vite, Vuex/Pinia y optimización de reactividad táctil.
+* **`frontend-performance-investigator`**: Diagnóstico de Core Web Vitals, Lighthouse, layout shifts y tareas largas de JavaScript.
+* **`premium-frontend-ui`**: Diseño de interfaces premium con microinteracciones, motion, tipografía y estética refinada.
+* **`web-design-reviewer`**: Detección de fallos de maquetación, breakpoints responsivos y consistencia visual en pantallas reales.
+* **`accessibility`**: Cumplimiento estricto WCAG 2.1/2.2 AA/AAA, navegación por teclado y lectores de pantalla.
+* **`frontend-ux`**: Maquetación limpia en HTML/CSS/JS sin añadir dependencias innecesarias.
+
+### ⚙️ D. Backend y Bases de Datos
+* **`api-architect`**: Arquitecto de APIs RESTful resilientes (circuit breakers, rate limiting, bulkheads, DTOs y mocks).
+* **`express-node-architect`**: Node.js + Express HTTPS, middlewares CORS, conexión a PostgreSQL (`pg`) y APIs locales.
+* **`python-backend`**: FastAPI / Python robusto con esquemas Pydantic, manejo de async y rutas protegidas.
+* **`postgresql-dba`**: DBA de PostgreSQL: `EXPLAIN ANALYZE`, creación de índices `CONCURRENTLY`, particionado y connection pooling.
+* **`postgresql-optimization`**: Tipos avanzados de Postgres, JSONB, arrays, búsqueda de texto completo y window functions.
+* **`postgresql-code-review`**: Revisión de código enfocada en Postgres, Row Level Security (RLS) y prevención de table locks.
+
+### 🛡️ E. Seguridad, CI/CD y DevOps
+* **`sast-sca-security-analyzer`**: Análisis estático de vulnerabilidades (SAST), dependencias (SCA) y mapeo CWE.
+* **`security-review`**: Escaneo de seguridad OWASP Top 10, inyección SQL, control de acceso y datos sensibles.
+* **`secret-scanning`**: Detección de tokens, llaves privadas y credenciales antes de commitear.
+* **`devops-expert`**: Empaquetado offline, Vite build, servicios de Windows Kiosk (NSSM/PM2) y certificados SSL locales.
+* **`github-actions-expert`**: Workflows de GitHub Actions, permisos least-privilege y OIDC.
+* **`se-gitops-ci-specialist`**: Despliegues automatizados, pipelines CI/CD y estabilidad operativa.
+
+### 🧹 F. Refactorización y Control de Deuda Técnica
+* **`principal-software-engineer`**: Mentoría técnica al estilo Martin Fowler: principios SOLID, GoF y arquitectura pragmática.
+* **`gem-code-simplifier`**: Eliminación de código muerto, reducción de complejidad cognitiva y guard clauses.
+* **`tech-debt-remediation-plan`**: Detección y priorización de deuda técnica con matriz de impacto y riesgo (1-5).
+* **`refactor`** & **`refactor-method-complexity-reduce`**: Extracción quirúrgica de métodos y refactorizaciones seguras.
+* **`wg-code-alchemist`** & **`wg-code-sentinel`**: Transformación de código hacia Clean Code y guardianes de diseño.
+
+### 📋 G. Flujo de Trabajo, Git y Gestión de Tickets
+* **`git-github-expert`**: Conventional Commits, ramas protegidas, resolución de conflictos y plantillas de PR.
+* **`jira-agile-specialist`**: Desglose de Epics, User Stories INVEST y criterios Gherkin (`Given/When/Then`).
+* **`monday-specialist`**: Orquestación de tableros Monday.com y resolución de bugs vía IDs de pulso.
+* **`terminal-helper`**: Construcción rápida de comandos PowerShell y Bash.
+
+### 🖥️ H. Hardware & Kioscos Especializados
+* **`totem-kiosk-dev`**: Integración de periféricos, pantallas táctiles, teclado virtual e impresoras térmicas ESC/POS/ZPL.
+* **`pos-hardware-backend-dev`**: Comunicación serial RS232 con terminales POS Transbank (`transbank-pos-sdk`).
+* **`totem-code-review`**: Checklist específico para evitar regresiones en tótems antes de desplegar a producción.
 
 ---
 
