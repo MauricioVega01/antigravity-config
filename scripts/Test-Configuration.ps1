@@ -1,15 +1,15 @@
-﻿# Test-Configuration.ps1 - Diagnóstico integral de Antigravity
+# Test-Configuration.ps1 - Diagnostico integral de Antigravity
 $ErrorActionPreference = 'SilentlyContinue'
 
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "  DIAGNÓSTICO DE ENTORNO ANTIGRAVITY    " -ForegroundColor Cyan
+Write-Host "  DIAGNOSTICO DE ENTORNO ANTIGRAVITY    " -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 
 # 1. Reglas Globales
 $rulesPath = Join-Path $HOME '.gemini\AGENTS.md'
 if (Test-Path -LiteralPath $rulesPath) {
-    $lines = (Get-Content -LiteralPath $rulesPath).Count
-    Write-Host "[OK] Regla Global instalada ($lines lineas) -> $rulesPath" -ForegroundColor Green
+    $lineCount = (Get-Content -LiteralPath $rulesPath).Count
+    Write-Host "[OK] Regla Global instalada ($lineCount lineas) -> $rulesPath" -ForegroundColor Green
 } else {
     Write-Host "[ALERTA] Regla Global NO encontrada en $rulesPath" -ForegroundColor Red
 }
@@ -21,7 +21,8 @@ if (Test-Path -LiteralPath $mcpPath) {
         $mcpContent = Get-Content -LiteralPath $mcpPath -Raw | ConvertFrom-Json
         $serverNames = $mcpContent.mcpServers.PSObject.Properties.Name
         if ($serverNames -and $serverNames.Count -gt 0) {
-            Write-Host "[OK] MCPs Configurados ($($serverNames.Count)): $($serverNames -join ', ')" -ForegroundColor Green
+            $namesStr = $serverNames -join ', '
+            Write-Host "[OK] MCPs Configurados ($($serverNames.Count)): $namesStr" -ForegroundColor Green
         } else {
             Write-Host "[INFO] Archivo mcp_config.json presente pero sin servidores activos." -ForegroundColor Yellow
         }
@@ -56,7 +57,7 @@ if (Test-Path (Join-Path $repoDir '.git')) {
     Write-Host "   [INFO] Git no inicializado en este repositorio." -ForegroundColor Yellow
 }
 
-# 5. Entornos de ejecucion
+# 5. Entornos del Sistema
 Write-Host "----------------------------------------" -ForegroundColor Cyan
 Write-Host "Entornos del Sistema:" -ForegroundColor Cyan
 $nodeV = (node -v 2>$null)

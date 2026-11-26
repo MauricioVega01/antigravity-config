@@ -6,7 +6,7 @@
         "-y",
         "@modelcontextprotocol/server-puppeteer"
       ],
-      "description": "Navegador headless para pruebas visuales, inspección de UI en localhost y capturas de pantalla"
+      "description": "Navegador headless para pruebas visuales en vivo, DOM, consola y screenshots en localhost"
     },
     "fetch": {
       "command": "npx",
@@ -14,16 +14,32 @@
         "-y",
         "@modelcontextprotocol/server-fetch"
       ],
-      "description": "Herramienta para consultar documentación y APIs externas sin navegador completo"
+      "description": "Consultas web y lectura de documentación técnica de librerías y APIs"
+    },
+    "git": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-git"
+      ],
+      "description": "Operaciones e inspecciones directas del repositorio Git"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "description": "Razonamiento secuencial profundo y descomposicion de problemas complejos paso a paso"
     },
     "postgres-local": {
       "command": "npx",
       "args": [
         "-y",
         "@modelcontextprotocol/server-postgres",
-        "postgresql://postgres:TU_PASSWORD@localhost:5432/tu_base_datos"
+        "postgresql://postgres:postgres@localhost:5432/postgres"
       ],
-      "description": "Inspección de base de datos PostgreSQL local (ajustar credenciales solo en tu máquina local)"
+      "description": "Inspeccion de base de datos PostgreSQL local (ajustar credenciales solo en tu maquina local)"
     }
   }
 }
