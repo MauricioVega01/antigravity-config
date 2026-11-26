@@ -2,6 +2,8 @@
 
 Plantilla privada de configuracion global de Antigravity, versionable y utilizable en PC de casa y PC de oficina (solo cuando las politicas de la oficina lo permitan).
 
+> 📘 **[Guía Completa Paso a Paso: Consulta el MANUAL_DE_USO.md](./MANUAL_DE_USO.md)** para instrucciones detalladas de clonación, configuración de MCPs, catálogo de agentes y comandos.
+
 ## Que instala
 - `global/AGENTS.md` -> `%USERPROFILE%\.gemini\AGENTS.md` (reglas globales siempre activas con soporte Mermaid y prevención de regresiones).
 - `global/skills/*/SKILL.md` -> `%USERPROFILE%\.gemini\config\skills\<skill>\SKILL.md` (skills globales curadas para Git, GitHub, Jira, Monday, Python, DevOps, etc.).
